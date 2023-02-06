@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 50px;
+    background-color: #424242;
+}
+.checkbox {
+    background: #FFFFFF;
+    padding: 30px;
+border-radius: 10px;
+width: 176px;
+margin-bottom: 20px;
+margin-right: 50px;
+}
+
+.checkbox__label {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.checkbox__standart {
+    display: none;
+}
+.checkbox__custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCB26E;
+border-radius: 3px;
+}
+.checkbox__custom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/img/checked.svg) center no-repeat transparent;
+    background-size: 16px 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.checkbox__standart:checked + .checkbox__custom::after {
+    opacity: 1;
+}
+
+
+/* SELECT */
+
+.choices__list--dropdown  .choices__placeholder {
+    display: none;
+    }
+
+.choices {
+    width: 176px;
+    border-radius: 10px;
+    border: 1px solid #CCB26E;
+}
+
+.choices__inner {
+    width: 176px;
+border-radius: 10px;
+border: 1px solid #CCB26E;
+min-height: auto;
+}
+
+.is-open .choices__inner, .is-flipped .choices__inner, .is-focused .choices__inner {
+    width: 176px;
+border-radius: 10px;
+border: 1px solid #CCB26E;
+}
+
+
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #CCB26E;
+    border-top: none;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+    padding: 10px 15px;
+}
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
+    padding-bottom: 10px;
+}
+.choices[data-type*=select-one]::after {
+    border: none;
+    width: 8px;
+height: 8px;
+border-right: 1px solid #666666;
+border-top: 1px solid #666666;
+transform: rotate(-45deg);
+}
+.choices[data-type*=select-one].is-open::after {
+    width: 8px;
+height: 8px;
+border-right: 1px solid #CCB26E;
+border-top: 1px solid #CCB26E;
+transform: rotate(135deg);
+}
+
+/* TOOLTIP */
+
+.text {
+    width: 500px;
+    height: 150px;
+    background-color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.text p {
+    width: 360px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.marker {
+transform: translateY(3px);
+transition: fill 0.3s ease-in-out;
+}
+
+.popup {
+    display: inline-block;
+    position: absolute;
+    bottom: calc(100% + 11px);
+    right: 0;
+    transform: translateX(80px);
+    background-color: #666666;
+    color: #FFFFFF;
+    padding: 7px 15px;
+    width: 170px;
+    font-size: 13px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.popup::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    right: 47%;
+    background-color: #666666;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+}
+
+.marker:hover  path,
+.marker:focus  path {
+    fill: #CCB26E;
+}
+
+.marker:hover + .popup,
+.marker:focus + .popup {
+    opacity: 1;
+}
+
+/* SCROLLBAR */
+
+.simplebar-content-wrapper {
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+  }
+
+  .simplebar-content-wrapper::-webkit-scrollbar,
+  .simplebar-hide-scrollbar::-webkit-scrollbar {
+    display: initial;
+    width: initial;
+    height: initial;
+  }
+
+.scrollbar {
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.simplebar-scrollbar::before {
+    background-color: #CCB26E;
+}
+/* MAP */
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+.map {
+    margin-bottom: 50px;
+}
+/* VALIDATION + TEL MASK */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 440px;
+    background-color: rgb(43, 33, 33);
+    padding: 38px 30px;
+border-radius: 10px;
+}
+
+.form__label {
+    position: relative;
+}
+
+.form__input {
+    height: 60px;
+    padding: 24px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    align-self: flex-start;
+    padding: 17px 53px;
+background: #FF5C00;
+border-radius: 10px;
+color: #FFFFFF;
+}
+
+
+.just-validate-error-label {
+    position: absolute;
+    top: -17px;
+    left: 20px;
+    font-size: 12px;
+    color: #FF5C00!important
+    
+}
+.just-validate-error-field {
+    border: 1px solid #FF5C00;;
+}
+  

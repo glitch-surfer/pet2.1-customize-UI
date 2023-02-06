@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/choices.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="/styles/style.css">
+
+
+</head>
+
+<body>
+
+  <!-- CHECKBOX -->
+  <form class="checkbox">
+    <h2>Категории</h2>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Динозавры
+      <span class="checkbox__custom"></span>
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Косули
+      <span class="checkbox__custom"></span>
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Медведи
+      <span class="checkbox__custom"></span>
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Лисы
+      <span class="checkbox__custom"></span>
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Волки
+      <span class="checkbox__custom"></span>
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__standart" type="checkbox">
+      Олени
+      <span class="checkbox__custom"></span>
+    </label>
+  </form>
+
+  <!-- SELECT -->
+  <select class="select" name="select" id="select">
+    <option value="">Материалы</option>
+    <option class="option" value="1">Древесина</option>
+    <option class="option" value="2">Металл</option>
+    <option class="option" value="3">Пластик</option>
+    <option class="option" value="4">Камень</option>
+    <option class="option" value="5">Композитный</option>
+    <option class="option" value="6">Гипс</option>
+  </select>
+
+  <script src="/scripts/choices.min.js"></script>
+  <script src="/scripts/choises-init.js"></script>
+
+
+  <!-- YANDEX MAP -->
+
+  <div class="map" id="map" style="width: 600px; height: 400px"></div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [48.872185, 2.354224],
+        zoom: 12
+      });
+      var myPlacemark = new ymaps.Placemark([48.873292, 2.347132], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/location.svg',
+        iconImageSize: [28, 40],
+        iconImageOffset: [-3, -42]
+      });
+      myMap.geoObjects.add(myPlacemark);
+    }
+  </script>
+
+  <!-- TOOLTIP -->
+  <div class="text">
+    <p>Следует отметить, что социально-экономическое развитие способствует <span class="tooltip">
+        <svg class="marker" tabindex="0" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+            fill="#BCBCBC" />
+        </svg>
+        <span class="popup">Глава 2, страница 176</span>
+      </span> повышению качества переосмысления внешнеэкономических политик.</p>
+
+  </div>
+
+  <!-- SCROLLBAR -->
+
+  <div class="scrollbar" data-simplebar>Сложно сказать, почему многие известные личности представлены в исключительно
+    положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими
+    инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет
+    собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно
+    следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в
+    целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+    социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
+    первоочередных требований.Сложно сказать, почему многие известные личности представлены в исключительно
+    положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими
+    инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет
+    собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно
+    следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в
+    целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+    социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
+    первоочередных требований.</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <!-- VALIDATE FORM+ TEL MASK (новая версия плагина валидации не отправляет запрос) -->
+
+  <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="form" autocomplete="off"
+    novalidate="novalidate">
+
+    <label class="form__label"><input type="text" class="form__input form-control" placeholder="Введите ваше имя"
+        autocomplete="off" name="name" id="name" /></label>
+    <label class="form__label"><input type="tel" class="form__input form-control" placeholder="Введите ваш телефон"
+        autocomplete="off" name="tel" id="tel" /></label>
+    <label class="form__label"><input type="email" class="form__input form-control" placeholder="Введите ваш email"
+        autocomplete="off" name="email" id="email" /></label>
+    <button class="btn btn-primary" id="submit-btn">Подтвердить</button>
+  </form>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="/scripts/inputmask.min.js"></script>
+  <script src="/scripts/just-validate-init.js"></script>
+
+</body>
+</html>
